@@ -7,7 +7,8 @@ students for the practical projects during the year.
 
 ## Tutorial Topics
 
- * WK2: (2hrs) Part 1: Getting started with Google Colab, Probability and Statistics. Part 2: Manipulating, visualising and cleaning data (Pandas)
+ * WK1: Getting started with Google Colab, Probability and Statistics.
+ * WK2  Manipulating, visualising and cleaning data (Pandas)
  * WK3: Fitting a model to data
  * WK4: Modelling data: Bayesian reasoning and samplers (MCMC)
  * WK5: Exploring structure in data: visualisation, PCA
@@ -19,7 +20,7 @@ students for the practical projects during the year.
  * WK11: Convolutional neural networks
  * WK12: Revision
 
-Tutorials start in Week 2 and run until Week 11, covering new topics
+Tutorials start in Week 1 and run until Week 11, covering new topics
 each week. If required, in Week 12 I will host a revision tutorial covering
 material from previous weeks.
 
