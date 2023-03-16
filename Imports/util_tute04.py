@@ -5,7 +5,7 @@
 #                                                                             #
 # PURPOSE:  Utility code for AST3110 Tutorial 4 at Macquarie University.      #
 #                                                                             #
-# MODIFIED: 01-Apr-2020 by C. Purcell, 17-Mar-2021 by M.Owers                 #
+# MODIFIED: 01-Apr-2020 by C. Purcell, 17-Mar-2021 & 16-March-2023 by M.Owers # 
 #                                                                             #
 #=============================================================================#
 import numpy as np
@@ -14,27 +14,18 @@ from matplotlib.ticker import MaxNLocator, ScalarFormatter
 
 
 #-----------------------------------------------------------------------------#
-
-def polyN(p):
+def polyN(p,x):
+    
     """
     When called, this function takes a vector of parameters
-    and returns another function to evaluate a polynomial
-    with these coefficients fixed.
+    and x-values, loops over the order number, and generates an Nth order polynomial.
     """
-    
-    def rfunc(x):
-        """
-        This function is returned by the polyN function. It takes a
-        vector of x values and loops over the order number, generating an Nth order polynomial.
-        """
-        y = 0.0
-        for i in np.arange(len(p)):
-            y += p[i]*x**float(i)
-        # Note the indent here
-        return y
-
+    y = 0.0
+    for i in np.arange(len(p)):
+        y += p[i]*x**float(i)
     # Note the indent here
-    return rfunc
+    return y
+
 
 #-----------------------------------------------------------------------------#
 def plot_spec_polyN(xData, yData, dyData, p=None):
@@ -61,7 +52,7 @@ def plot_spec_polyN(xData, yData, dyData, p=None):
         xModel = np.linspace(start=np.min(xData),
                              stop=np.max(xData),
                              num=nSamples)
-        yModel = polyN(p)(xModel)
+        yModel = polyN(p,xModel)
 
         # Plot the model
         ax.plot(xModel, yModel, color="red", marker="None",
